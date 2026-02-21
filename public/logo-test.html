@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Logo Test - Hotel MIS</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .header {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .header h1 {
+            color: #333;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .status {
+            display: inline-block;
+            background: #10b981;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+        }
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        .card h2 {
+            color: #667eea;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+        }
+        .sidebar-demo {
+            background: #343a40;
+            padding: 15px;
+            border-radius: 8px;
+            color: white;
+            margin: 15px 0;
+        }
+        .brand-link {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 5px;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s;
+        }
+        .brand-link:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .brand-image {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 12px;
+            background: white;
+            border: 3px solid rgba(255,255,255,0.8);
+        }
+        .brand-text {
+            font-size: 1.1rem;
+            font-weight: 300;
+        }
+        .info-box {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+            border-left: 4px solid #667eea;
+        }
+        .code-block {
+            background: #1a1a1a;
+            color: #0f0;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            overflow-x: auto;
+            margin: 10px 0;
+        }
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+        .feature-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .feature-list li:before {
+            content: "✅ ";
+            margin-right: 8px;
+        }
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 15px 0;
+        }
+        .before, .after {
+            padding: 15px;
+            border-radius: 8px;
+        }
+        .before {
+            background: #fee;
+            border: 2px solid #f00;
+        }
+        .after {
+            background: #efe;
+            border: 2px solid #0f0;
+        }
+        @media (max-width: 768px) {
+            .grid { grid-template-columns: 1fr; }
+            .comparison { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏨 Dynamic Logo System</h1>
+            <p>All Portals Now Load Logo & Name from Settings</p>
+            <span class="status">✅ IMPLEMENTED</span>
+        </div>
+
+        <div class="grid">
+            <!-- Admin Portal -->
+            <div class="card">
+                <h2>👨‍💼 Admin Portal</h2>
+                <div class="sidebar-demo">
+                    <a href="#" class="brand-link">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23667eea'/%3E%3Ctext x='50' y='65' text-anchor='middle' fill='white' font-size='50' font-weight='bold'%3EH%3C/text%3E%3C/svg%3E" 
+                             alt="Hotel Logo" class="brand-image">
+                        <span class="brand-text">Grand Hotel</span>
+                    </a>
+                </div>
+                <div class="info-box">
+                    <strong>Logo Source:</strong> Settings → Logo & Favicon<br>
+                    <strong>Name Source:</strong> Settings → Hotel Name<br>
+                    <strong>Display:</strong> Hotel name as-is
+                </div>
+                <ul class="feature-list">
+                    <li>Dynamic logo loading</li>
+                    <li>Fallback to default if none set</li>
+                    <li>Circular image with shadow</li>
+                    <li>Auto-scaled to 33px height</li>
+                </ul>
+            </div>
+
+            <!-- Staff Portal -->
+            <div class="card">
+                <h2>👨‍💻 Staff Portal</h2>
+                <div class="sidebar-demo">
+                    <a href="#" class="brand-link">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%2310b981'/%3E%3Ctext x='50' y='65' text-anchor='middle' fill='white' font-size='50' font-weight='bold'%3EH%3C/text%3E%3C/svg%3E" 
+                             alt="Hotel Logo" class="brand-image">
+                        <span class="brand-text">Grand Hotel - Staff</span>
+                    </a>
+                </div>
+                <div class="info-box">
+                    <strong>Logo Source:</strong> Settings → Logo & Favicon<br>
+                    <strong>Name Source:</strong> Settings → Hotel Name + " - Staff"<br>
+                    <strong>Display:</strong> Hotel name with Staff suffix
+                </div>
+                <ul class="feature-list">
+                    <li>Same logo as Admin</li>
+                    <li>Automatic " - Staff" suffix</li>
+                    <li>Consistent branding</li>
+                    <li>Real-time updates</li>
+                </ul>
+            </div>
+
+            <!-- Guest Portal -->
+            <div class="card">
+                <h2>👨‍🎓 Guest Portal</h2>
+                <div class="sidebar-demo">
+                    <a href="#" class="brand-link">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23f59e0b'/%3E%3Ctext x='50' y='65' text-anchor='middle' fill='white' font-size='50' font-weight='bold'%3EH%3C/text%3E%3C/svg%3E" 
+                             alt="Hotel Logo" class="brand-image">
+                        <span class="brand-text">Grand Hotel - Guest</span>
+                    </a>
+                </div>
+                <div class="info-box">
+                    <strong>Logo Source:</strong> Settings → Logo & Favicon<br>
+                    <strong>Name Source:</strong> Settings → Hotel Name + " - Guest"<br>
+                    <strong>Display:</strong> Hotel name with Guest suffix
+                </div>
+                <ul class="feature-list">
+                    <li>Same logo as Admin/Staff</li>
+                    <li>Automatic " - Guest" suffix</li>
+                    <li>Professional appearance</li>
+                    <li>Updates immediately</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Implementation Details -->
+        <div class="card" style="margin-top: 30px;">
+            <h2>📋 Implementation Details</h2>
+            
+            <h3 style="margin-top: 20px; color: #333;">Code Structure</h3>
+            <div class="code-block">@if(\App\Models\Setting::get('hotel_logo'))
+    &lt;img src="{{ asset(\App\Models\Setting::get('hotel_logo')) }}" 
+         alt="{{ \App\Models\Setting::get('hotel_name', 'Hotel') }}"
+         class="brand-image img-circle elevation-3"
+         style="opacity: .8; max-height: 33px; object-fit: cover;"&gt;
+@else
+    &lt;img src="{{asset('backend')}}/dist/img/AdminLTELogo.png" alt="Logo"&gt;
+@endif
+&lt;span class="brand-text"&gt;
+    {{ \App\Models\Setting::get('hotel_name', 'Admin Hotel') }}
+&lt;/span&gt;</div>
+
+            <h3 style="margin-top: 20px; color: #333;">Before vs After</h3>
+            <div class="comparison">
+                <div class="before">
+                    <strong>❌ Before (Hardcoded)</strong>
+                    <div class="code-block">&lt;img src="backend/dist/img/AdminLTELogo.png"&gt;
+&lt;span&gt;Admin Hotel&lt;/span&gt;</div>
+                    <p><small>• Fixed logo and text<br>• No customization<br>• Requires code changes</small></p>
+                </div>
+                <div class="after">
+                    <strong>✅ After (Dynamic)</strong>
+                    <div class="code-block">&lt;img src="{{ Setting::get('hotel_logo') }}"&gt;
+&lt;span&gt;{{ Setting::get('hotel_name') }}&lt;/span&gt;</div>
+                    <p><small>• Database-driven<br>• Admin configurable<br>• Updates instantly</small></p>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 20px; color: #333;">How to Update</h3>
+            <ol style="line-height: 1.8; padding-left: 20px;">
+                <li>Log in as Admin</li>
+                <li>Go to <strong>Settings</strong> page</li>
+                <li>Click <strong>Logo & Favicon</strong> tab</li>
+                <li>Upload your hotel logo (PNG, JPEG, max 2MB)</li>
+                <li>Go to <strong>General Settings</strong> tab</li>
+                <li>Update <strong>Hotel Name</strong> field</li>
+                <li>Click <strong>Save Settings</strong></li>
+                <li>Logo and name update across all portals immediately!</li>
+            </ol>
+
+            <h3 style="margin-top: 20px; color: #333;">Features</h3>
+            <ul class="feature-list">
+                <li>Unified branding across all user roles</li>
+                <li>No code changes required for updates</li>
+                <li>Automatic fallback to default logo</li>
+                <li>Image optimization (circular, shadow, scaling)</li>
+                <li>Backward compatible with existing settings</li>
+                <li>Old logo files automatically cleaned up</li>
+            </ul>
+        </div>
+
+        <!-- Quick Reference -->
+        <div class="card" style="margin-top: 30px;">
+            <h2>🔗 Quick Reference</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 15px;">
+                <div class="info-box">
+                    <strong>Settings Page</strong><br>
+                    <a href="http://localhost:8000/admin/settings">http://localhost:8000/admin/settings</a>
+                </div>
+                <div class="info-box">
+                    <strong>Upload Location</strong><br>
+                    <code>public/uploads/settings/</code>
+                </div>
+                <div class="info-box">
+                    <strong>Database Key</strong><br>
+                    <code>hotel_logo</code> & <code>hotel_name</code>
+                </div>
+                <div class="info-box">
+                    <strong>Documentation</strong><br>
+                    <a href="../DYNAMIC_LOGO_GUIDE.md">DYNAMIC_LOGO_GUIDE.md</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,184 @@
+/* Hanuman Font */
+@font-face {
+  font-family: 'Hanuman';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url('./hanuman/Hanuman-Thin.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Hanuman';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('./hanuman/Hanuman-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Hanuman';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./hanuman/Hanuman-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Hanuman';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('./hanuman/Hanuman-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Hanuman';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url('./hanuman/Hanuman-Black.ttf') format('truetype');
+}
+
+/* Kantumruy Pro Font */
+@font-face {
+  font-family: 'Kantumruy Pro';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url('./kantumruy-pro/KantumruyPro-Thin.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Kantumruy Pro';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url('./kantumruy-pro/KantumruyPro-ExtraLight.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Kantumruy Pro';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('./kantumruy-pro/KantumruyPro-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Kantumruy Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./kantumruy-pro/KantumruyPro-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Kantumruy Pro';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('./kantumruy-pro/KantumruyPro-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Kantumruy Pro';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('./kantumruy-pro/KantumruyPro-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Kantumruy Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('./kantumruy-pro/KantumruyPro-Bold.ttf') format('truetype');
+}
+
+/* Khmer Font Utility Classes */
+.khmer-font-hanuman {
+  font-family: 'Hanuman', 'Kh Battambang', 'Kh Muol', sans-serif !important;
+}
+
+.khmer-font-kantumruy {
+  font-family: 'Kantumruy Pro', 'Kh Battambang', 'Kh Muol', sans-serif !important;
+}
+
+/* Apply to body when Khmer locale is active - EXCLUDES Font Awesome icons */
+body[data-khmer-font="hanuman"] {
+  font-family: 'Hanuman', 'Kh Battambang', 'Kh Muol', sans-serif;
+}
+
+body[data-khmer-font="hanuman"] p,
+body[data-khmer-font="hanuman"] span:not([class*="fa"]):not(.badge):not(.label),
+body[data-khmer-font="hanuman"] div:not(.info-box-icon),
+body[data-khmer-font="hanuman"] td,
+body[data-khmer-font="hanuman"] th,
+body[data-khmer-font="hanuman"] h1,
+body[data-khmer-font="hanuman"] h2,
+body[data-khmer-font="hanuman"] h3,
+body[data-khmer-font="hanuman"] h4,
+body[data-khmer-font="hanuman"] h5,
+body[data-khmer-font="hanuman"] h6,
+body[data-khmer-font="hanuman"] a:not(.btn),
+body[data-khmer-font="hanuman"] label,
+body[data-khmer-font="hanuman"] .form-control,
+body[data-khmer-font="hanuman"] .card-title,
+body[data-khmer-font="hanuman"] .card-text {
+  font-family: 'Hanuman', 'Kh Battambang', 'Kh Muol', sans-serif !important;
+}
+
+body[data-khmer-font="kantumruy"] {
+  font-family: 'Kantumruy Pro', 'Kh Battambang', 'Kh Muol', sans-serif;
+}
+
+body[data-khmer-font="kantumruy"] p,
+body[data-khmer-font="kantumruy"] span:not([class*="fa"]):not(.badge):not(.label),
+body[data-khmer-font="kantumruy"] div:not(.info-box-icon),
+body[data-khmer-font="kantumruy"] td,
+body[data-khmer-font="kantumruy"] th,
+body[data-khmer-font="kantumruy"] h1,
+body[data-khmer-font="kantumruy"] h2,
+body[data-khmer-font="kantumruy"] h3,
+body[data-khmer-font="kantumruy"] h4,
+body[data-khmer-font="kantumruy"] h5,
+body[data-khmer-font="kantumruy"] h6,
+body[data-khmer-font="kantumruy"] a:not(.btn),
+body[data-khmer-font="kantumruy"] label,
+body[data-khmer-font="kantumruy"] .form-control,
+body[data-khmer-font="kantumruy"] .card-title,
+body[data-khmer-font="kantumruy"] .card-text {
+  font-family: 'Kantumruy Pro', 'Kh Battambang', 'Kh Muol', sans-serif !important;
+}
+
+/* Ensure Font Awesome icons always use the correct font */
+i[class*="fa-"],
+.fa,
+.fas,
+.far,
+.fal,
+.fab,
+[class^="fa-"],
+[class*=" fa-"] {
+  font-family: "Font Awesome 6 Free", "Font Awesome 5 Free", "FontAwesome" !important;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+.fab {
+  font-family: "Font Awesome 6 Brands", "Font Awesome 5 Brands", "FontAwesome" !important;
+}
+
+/* Better line height for Khmer text */
+body[data-khmer-font] {
+  line-height: 1.8;
+}
+
+body[data-khmer-font] p,
+body[data-khmer-font] td,
+body[data-khmer-font] th {
+  line-height: 1.8;
+}
